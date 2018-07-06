@@ -1,0 +1,13 @@
+
+
+<view class="item-box">
+  <view class="items">
+    <view class="total">签到总人数为：{{list.length}}</view>
+    <view wx:for="{{list}}"  wx:key="{{index}}"  class="item">
+      <text class="ID">{{item.topic}}</text>
+      <text class="NAME">{{item.startTime}}</text>
+      <text class="TOPIC">{{item.endTime}}</text>
+      
+    </view>
+  </view>
+</view>
