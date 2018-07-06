@@ -1,0 +1,97 @@
+/* pages/Message_1Form/Message_1Form.wxss */
+.InitialFindButton {
+  width: 50%;
+  margin-top: 30rpx;
+  background-color: #eee;
+  color: #000;
+  float: left;
+}
+.Sign_inFindButton {
+  width: 50%;
+  margin-top: 30rpx;
+  background-color: #eee;
+  color: #000;
+  float: right;
+}
+view{
+    box-sizing: border-box;
+}
+.item-box{
+    width: 700rpx;
+    margin: 0 auto;
+    padding:40rpx 0;
+}
+.items{
+    width: 100%;
+}
+.item{
+    position: relative;
+    border-top: 2rpx solid #eee;
+    height: 120rpx;
+    line-height: 120rpx;
+    overflow: hidden;
+}
+.item:last-child{
+    border-bottom: 2rpx solid #eee;
+}
+.inner{
+    position: absolute;
+    top:0;
+}
+.inner.txt{
+    background-color: #fff;
+    width: 100%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.inner.del{
+    background-color: #e64340;
+    width: 180rpx;text-align: center;
+    z-index: 4;
+    right: 0;
+    color: #fff;
+}
+.inner.out{
+    background-color: #001340;
+    width: 180rpx;text-align: center;
+    z-index: 4;
+    right: 180rpx;
+    color: #fff;
+}
+.IfEnd{
+    width: 20%;
+    text-align: center; 
+}
+
+.thumb{
+    width: 200px;
+    height: 200px;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+}
+
+#ongoing{
+  color: red;
+}
+#end{
+  color: green;
+}
+.total{
+  text-align: center;
+  color: blue;
+}
+
+.bright789-text{
+ font-size: 40rpx;
+ line-height: 40px;
+ color: #ff0000;
+}
+.bright789_view_hide{
+ display: none;
+}
+.bright789_view_show{
+ display: block;
