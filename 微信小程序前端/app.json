@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Message_1Form/Message_1Form",
+    "pages/Message_2Form/Message_2Form",
+    "pages/index/ini",
+    "pages/index/next",
+    "pages/index/help",
+    "pages/Detial_Message/Detial_Message",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#222",
+    "backgroundColor": "#f8f9fb",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "assets/todos.png",
+        "selectedIconPath": "assets/todos-active.png"
+      },
+      {
+        "pagePath": "pages/Message_1Form/Message_1Form",
+        "text": "已发起",
+        "iconPath": "assets/logs.png",
+        "selectedIconPath": "assets/logs-active.png"
+      },
+      {
+        "pagePath": "pages/Message_2Form/Message_2Form",
+        "text": "已签到",
+        "iconPath": "assets/logs.png",
+        "selectedIconPath": "assets/logs-active.png"
+      },
+      {
+        "pagePath": "pages/index/help",
+        "text": "帮助",
+        "iconPath": "assets/logs.png",
+        "selectedIconPath": "assets/logs-active.png"
+      }
+    ]
+  }
+}
