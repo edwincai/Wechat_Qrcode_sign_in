@@ -1,0 +1,63 @@
+<!--pages/ini/ini.wxml-->
+<view class="container">
+<view class="block-1">  
+  <form bindsubmit='formSubmit'>
+    <view class="block-2"> 
+      <view class="block-3">
+        <view class="text-1">
+          <text>签到主题</text>
+        </view>
+      </view>
+      <view class="block-4">
+        <view class="text-2">
+          <input placeholder="最多填写30字" name="topic" type="text" maxlength="30" confirm-type="done" bindinput="bindInput_1"/>
+       </view>
+      </view>
+    </view>
+
+    <toast hidden="{{status}}" duration="2000" bindchange="toastHide">
+        {{show2}}
+    </toast>
+
+    <view class="block-2"> 
+      <view class="block-3">
+        <view class="text-1">
+          <text>签到结束时间</text>
+        </view>
+      </view>
+      <view class="block-4">
+        <view class="text-2">
+          <picker mode="time" value="{{endtime}}"  bindchange="bindTimeChange" name="endtime">
+            <view class="picker">当前选择: {{endtime}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>    
+
+    <view class="block-5"> 
+      <view class="block-3">
+        <view class="text-1">
+          <text>签到活动</text>
+        </view>
+      </view>
+      <view class="block-4">
+        <view class="text-3">
+           <textarea name="content" bindblur="bindTextAreaBlur" placeholder="自动变高" bindinput="bindInput_2"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="e">
+    <view class="temp">
+        <button class="button" type="primary" size="mini" form-type='submit' open-type="getUserInfo" > 提交 </button>
+    </view>
+    </view>  
+
+
+
+
+
+  </form>
+</view>
+
+</view>

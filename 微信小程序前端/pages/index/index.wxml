@@ -1,0 +1,20 @@
+<text class = "text">
+
+hello!
+
+
+</text>
+<view class = "item" bindtap='InitialSignIn'>
+<image class="item-icon" mode="widthFix" src="/assets/icon0.png"></image>
+<text>发起签到
+
+
+
+</text>
+
+</view>
+<view class = "item" bindtap='scan'>
+<image class="item-icon" mode="widthFix" src="/assets/icon1.png"></image>
+<text>扫码签到
+</text>
+</view>
