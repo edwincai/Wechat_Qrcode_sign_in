@@ -1,9 +1,10 @@
-<!--index.wxml-->
+<!--register.wxml-->
+<!--注册界面信息-->
 <view class = "page_bd">
   
   <!--错误提示-->
   <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
-
+  <!--获取微信用户头像昵称-->
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -12,7 +13,7 @@
     </block>
   </view>
 
-
+<!--使用form表单传递数据-->
   <form bindsubmit="formSubmit" bindreset="formReset">     
     <view class="weui-cell weui-cell_input">  
       <view class="weui-cell__hd">  
