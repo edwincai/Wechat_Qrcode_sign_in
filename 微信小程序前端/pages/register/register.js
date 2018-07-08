@@ -5,7 +5,7 @@ var util = require('../../utils/util.js');
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -38,9 +38,10 @@ Page({
         }
       })
     }
-
+    //获取用户信息，并将其放入全局变量name,num,school中
     wx.getStorage({
       key: 'UserName',
+      //检测是否曾经登陆过该程序，如果有直接调转入主界面中
       success: function(res) {
         getApp().globalData.name = res.data
         getApp().globalData.num = wx.getStorageSync('UserId')
@@ -65,12 +66,12 @@ Page({
   },
 
   formSubmit:function(x) {
-  //定义姓名，学号，学校
+    //定义姓名，学号，学校
     var name = x.detail.value.name;
     var num = x.detail.value.num;
     var school = x.detail.value.school;
     var that = this;
-  //姓名是否为空
+    //姓名是否为空
     if (("" == util.trim(name)) || ("" == util.trim(num)) || (("" == util.trim(school)))) {
       util.isError("信息不能为空", that);
       return;
@@ -78,7 +79,7 @@ Page({
       util.clearError(that);
     }
 
-
+    //向数据库上传用户信息
     wx.request({
       url: 'http://172.18.159.50/register.php',
       data:{
@@ -91,7 +92,7 @@ Page({
       success:function (res) {
         console.log(name);
         console.log(res.data);
-
+        //将用户信息导入缓存
         wx.setStorageSync('UserName', name);
         wx.setStorageSync('UserId', num);
         wx.setStorageSync('UserSchool', school);
