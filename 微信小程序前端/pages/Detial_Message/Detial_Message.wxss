@@ -1,0 +1,82 @@
+/* pages/Message_1Form/Message_1Form.wxss */
+.InitialFindButton {
+  width: 50%;
+  margin-top: 30rpx;
+  background-color: #eee;
+  color: #000;
+  float: left;
+}
+.Sign_inFindButton {
+  width: 50%;
+  margin-top: 30rpx;
+  background-color: #eee;
+  color: #000;
+  float: right;
+}
+.button {
+  width: 33%;
+  margin-top: 30rpx;
+  background-color: #eee;
+  color: #000;
+  float: left;
+  position:fixed; 
+  left: 33%;
+  bottom:0; 
+}
+view{
+    box-sizing: border-box;
+}
+.item-box{
+    width: 700rpx;
+    margin: 0 auto;
+    padding:40rpx 0;
+}
+.items{
+    width: 100%;
+}
+.item{
+    position: relative;
+    border-top: 2rpx solid #eee;
+    height: 120rpx;
+    line-height: 120rpx;
+    overflow: hidden;
+}
+.item:last-child{
+    border-bottom: 2rpx solid #eee;
+}
+
+.ID{
+    background-color: #fff;
+    width: 50%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color: red;
+}
+
+.NAME{
+    background-color: #fff;
+    width: 50%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color: blue;
+}
+
+.TOPIC{
+    background-color: #fff;
+    width: 50%;
+    z-index: 5;
+    padding:0 10rpx;
+    transition: left 0.2s ease-in-out;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color: green;
+}
