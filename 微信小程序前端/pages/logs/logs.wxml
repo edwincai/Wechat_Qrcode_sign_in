@@ -1,0 +1,5 @@
+
+<button bindtap="getmassage">点我</button>
+
+  <view>{{data.useNname}}</view>
+<text>{{data.key}}</text>
