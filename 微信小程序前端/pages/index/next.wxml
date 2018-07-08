@@ -1,0 +1,20 @@
+<!-- This is our View -->
+<view> 发起签到成功！</view>
+<text>\n</text>
+签到主题：
+<view>{{temp}}</view>
+签到二维码：
+
+
+    <span style="font-family:'Comic Sans MS';font-size:18px;color:#333333;"><view class="zn-uploadimg">   
+    <image src="{{tempFilePaths}}" mode="aspecFill" style="width: 450rpx; height: 450rpx" />  
+</view></span>
+
+<text>
+扫码签到步骤：
+1.从微信小程序中搜索“扫码签到工具”
+2.打开“扫码签到工具”，点击“扫码签到”，扫码。
+
+说明：
+点击“获取二维码”预览图片，保存图片到相册后
+即可分享给他人扫码签到</text>
