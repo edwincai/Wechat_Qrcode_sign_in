@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class = "page_bd">
+  
+  <!--错误提示-->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+  <form bindsubmit="formSubmit" bindreset="formReset">     
+    <view class="weui-cell weui-cell_input">  
+      <view class="weui-cell__hd">  
+        <view class="weui-label">姓名</view>  
+      </view>  
+    <view class="weui-cell__bd">  
+      <input class="weui-input" placeholder="请输入姓名" type="text" maxlength="5" value="{{name}}" focus="true" name="name"/>  
+    </view>
+    </view>
+    <view class="weui-cell weui-cell_input">  
+      <view class="weui-cell__hd">  
+        <view class="weui-label">学号</view>  
+      </view>  
+    <view class="weui-cell__bd">  
+      <input class="weui-input" placeholder="请输入学号" type="number" maxlength="8" value="{{num}}" focus="true" name="num"/>  
+    </view>
+    </view>
+    <view class="weui-cell weui-cell_input">  
+      <view class="weui-cell__hd">  
+        <view class="weui-label">学校</view>  
+      </view>  
+      <view class="weui-cell__bd">  
+      <input class="weui-input" placeholder="请输入学校" type="text" maxlength="10" value="{{school}}" focus="true" name="school"/>  
+      </view>
+    </view>
+    <view class="weui-btn-area">  
+      <button class="weui-btn" type="primary" formType="submit">注册</button>  
+    </view>
+  </form>
+</view>
